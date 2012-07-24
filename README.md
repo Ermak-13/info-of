@@ -5,7 +5,7 @@ It is simple rails helper. It help displaying information of some object.
 Instead of ...
 
 `
-"<div class="user">
+<div class="user">
 	<div class="first_name">
 		<div class="label">first name:</div>	
 		<div class="value">some</div>
@@ -14,17 +14,17 @@ Instead of ...
 		<div class="label">last name:</div>
 		<div class="value">some</div>
 	</div>
-</div>"
+</div>
 `
 
 you can write ...
 
 `
-"<%= info_of @user do |f| %>
+<%= info_of @user do |f| %>
 	<%= f.info_field :first_name %>
 	<%= f.info_field :last_name, :label => 'lol', :field_html => {}, :label_html => { 
 		:tag_name => :span, :class => 'some' }, :value_html => {} %>
-<% end %>"
+<% end %>
 `
 
 You can customize some moments. You can pass any html attributes to field (wrapper), label
